@@ -1,10 +1,44 @@
 import {
-  Github,
-  Instagram,
-  Linkedin,
+  BriefcaseBusiness,
+  Camera,
+  Code2,
   MessageCircle,
-  Youtube,
+  Play,
+  Snowflake,
 } from "lucide-react";
+
+const socialLinks = [
+  {
+    name: "Discord",
+    href: "https://discord.gg/bZ47fac2jn",
+    icon: MessageCircle,
+  },
+  {
+    name: "WhatsApp",
+    href: "https://chat.whatsapp.com/Cs6bcCYUD5zLXmElzX9HOq",
+    icon: MessageCircle,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/nsoc.in",
+    icon: Camera,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/nso-code",
+    icon: BriefcaseBusiness,
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@nsoc-in",
+    icon: Play,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/deepanshu-prajapati01",
+    icon: Code2,
+  },
+];
 
 export function Footer() {
   return (
@@ -14,8 +48,8 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/20 bg-cyan-500/10 text-cyan-500">
-                ❄
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/20 bg-cyan-500/10">
+                <Snowflake className="h-5 w-5 text-cyan-500" />
               </div>
 
               <span className="text-xl font-bold">NSoC&apos;26</span>
@@ -26,46 +60,25 @@ export function Footer() {
               codebases and contributors close issues that ship to production.
             </p>
 
-            <div className="mt-6 flex gap-3">
-              <a
-                href="#"
-                aria-label="GitHub"
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border transition hover:bg-accent"
-              >
-                <Github className="h-4 w-4" />
-              </a>
+            {/* Social links */}
+            <div className="mt-6 flex flex-wrap gap-3">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
 
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border transition hover:bg-accent"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border transition hover:bg-accent"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border transition hover:bg-accent"
-              >
-                <Youtube className="h-4 w-4" />
-              </a>
-
-              <a
-                href="#"
-                aria-label="Community"
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border transition hover:bg-accent"
-              >
-                <MessageCircle className="h-4 w-4" />
-              </a>
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    title={social.name}
+                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-border text-muted-foreground transition hover:border-cyan-500/30 hover:bg-cyan-500/10 hover:text-cyan-500"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -80,11 +93,14 @@ export function Footer() {
                 Home
               </a>
 
-              <a href="#" className="transition hover:text-foreground">
+              <a
+                href="/leaderboard"
+                className="transition hover:text-foreground"
+              >
                 Leaderboard
               </a>
 
-              <a href="#" className="transition hover:text-foreground">
+              <a href="/projects" className="transition hover:text-foreground">
                 Projects
               </a>
             </div>
@@ -101,13 +117,14 @@ export function Footer() {
                 Sponsors
               </a>
 
-              <a href="#" className="transition hover:text-foreground">
+              <a href="/team" className="transition hover:text-foreground">
                 Team
               </a>
             </div>
           </div>
         </div>
 
+        {/* Bottom */}
         <div className="mt-12 flex flex-col gap-4 border-t border-border pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>© 2026 NSoC. All rights reserved.</p>
 
