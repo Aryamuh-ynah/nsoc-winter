@@ -56,3 +56,38 @@ export const steps = [
     description: "Top builders claim prizes, swag, and direct job referrals.",
   },
 ];
+export const roles = [
+  {
+    label: "CONTRIBUTOR",
+    title: "You write code.",
+    description: "Build, contribute, and grow through real open-source work.",
+    points: [
+      "Pick a track that matches your stack",
+      "Browse curated open issues from real projects",
+      "Submit PRs, get reviewed, earn points per merge",
+      "Climb the leaderboard, claim prizes",
+    ],
+  },
+  {
+    label: "PROJECT KERNEL",
+    title: "You bring the project.",
+    description: "Bring your open-source codebase and mentor contributors.",
+    points: [
+      "Submit your open source project for the program",
+      "Curate issues fit for contributors of all levels",
+      "Review PRs and mentor contributors through your codebase",
+      "Get meaningful contributions — and give someone their first real merge",
+    ],
+  },
+  {
+    label: "CAMPUS AMBASSADOR",
+    title: "You lead the campus.",
+    description: "Represent NSoC and grow the open-source community on campus.",
+    points: [
+      "Represent NSoC as the official face on your campus",
+      "Onboard & mentor student peers into open source",
+      "Drive registrations, build cohorts, host meetups",
+      "Earn exclusive swags, leadership certificates & perks",
+    ],
+  },
+];
