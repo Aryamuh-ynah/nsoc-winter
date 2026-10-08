@@ -12,6 +12,7 @@ export default function Home() {
       <Features />
       <Roles />
       <Process />
+      <Timeline />
     </main>
   );
 }

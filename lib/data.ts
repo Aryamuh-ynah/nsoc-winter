@@ -91,3 +91,44 @@ export const roles = [
     ],
   },
 ];
+export const timeline = [
+  {
+    step: "01",
+    date: "OCTOBER 1, 2026",
+    title: "Registration Opens",
+    description:
+      "Registrations are open on October 1st and anyone can register now to join the program.",
+  },
+  {
+    step: "02",
+    date: "OCTOBER 12, 2026",
+    title: "Projects Announced",
+    description:
+      "All approved projects are published and available for contributors to explore.",
+  },
+  {
+    step: "03",
+    date: "OCTOBER 15, 2026",
+    title: "Contribution Period Begins",
+    description: "Contributors start working on their selected projects.",
+  },
+  {
+    step: "04",
+    date: "TO BE DECLARED",
+    title: "Registrations Close",
+    description: "Final deadline for new participant registrations.",
+  },
+  {
+    step: "05",
+    date: "DECEMBER 30, 2026",
+    title: "Program Ends",
+    description: "Contribution period concludes and final submissions are due.",
+  },
+  {
+    step: "06",
+    date: "JANUARY 15, 2027",
+    title: "Results Announced",
+    description:
+      "Winners and top contributors are recognised and results are declared.",
+  },
+];

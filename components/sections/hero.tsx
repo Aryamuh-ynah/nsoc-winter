@@ -11,11 +11,12 @@ export function Hero() {
       <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
 
       <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-        >
+        > */}
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-medium tracking-[0.2em] text-cyan-200">
             <Snowflake className="h-4 w-4" />
             45-DAY OPEN SOURCE SPRINT
@@ -55,11 +56,16 @@ export function Hero() {
         </motion.div>
 
         <motion.div
+          initial={false}
+          animate={{ opacity: 1, scale: 1 }}
+          className="relative hidden lg:block"
+        >
+          {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
           className="relative hidden lg:block"
-        >
+        > */}
           <div className="aspect-square rounded-[3rem] border border-border bg-card/50 shadow-2xl backdrop-blur-xl">
             <div className="absolute inset-8 rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-cyan-300/10 to-indigo-400/10" />
 
