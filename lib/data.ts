@@ -132,3 +132,57 @@ export const timeline = [
       "Winners and top contributors are recognised and results are declared.",
   },
 ];
+export const contributorRewards = [
+  {
+    rank: "Rank 1",
+    rewards: [
+      "NSoC T-Shirt",
+      "Unstop T-Shirt",
+      "NSoC Cap",
+      "Diary, Bookmark & Pen",
+      "NSoC Hard Copy Certificate",
+      ".xyz Domain",
+      "Social Media Recognition",
+    ],
+  },
+  {
+    rank: "Top 3",
+    rewards: [
+      "NSoC T-Shirt",
+      "Diary, Bookmark & Pen",
+      "NSoC Cap",
+      ".xyz Domain",
+      "Unstop T-Shirt",
+      "NSoC Hard Copy Certificate",
+      "Social Media Recognition",
+    ],
+  },
+  {
+    rank: "Top 5",
+    rewards: [
+      "NSoC T-Shirt",
+      "Diary, Bookmark & Pen",
+      "NSoC Cap",
+      "NSoC Hard Copy Certificate",
+      ".xyz Domain",
+      "Social Media Recognition",
+    ],
+  },
+  {
+    rank: "Top 10",
+    rewards: [
+      "Diary, Bookmark & Pen",
+      "NSoC Cap",
+      "NSoC Hard Copy Certificate",
+      ".xyz Domain",
+      "NSoC Digital Certificate",
+      "Social Media Recognition",
+    ],
+  },
+];
+
+export const participantRewards = [
+  "TruScholar Digital Certificate",
+  "NSoC Digital Certificate",
+  "Badge Point Base",
+];
