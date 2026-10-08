@@ -186,3 +186,39 @@ export const participantRewards = [
   "NSoC Digital Certificate",
   "Badge Point Base",
 ];
+
+export const sponsors = [
+  {
+    tier: "TITLE SPONSOR",
+    name: "Unstop",
+    description:
+      "A leading platform for hosting and managing online competitions, hackathons, and hiring challenges, fostering student talent across tech domains.",
+  },
+  {
+    tier: "GOLD SPONSOR",
+    name: "Arkham Experience",
+    description:
+      "An immersive media-tech company pioneering Gen AI, Agentic AI, Holographics, Spatial Computing, AR/XR, and distributed networks.",
+  },
+  {
+    tier: "SILVER SPONSOR",
+    name: "Extension Shield",
+    description:
+      "Security-first browser extension management. Protecting developers and organizations from malicious extensions and supply chain risks.",
+  },
+];
+
+export const communityPartners = [
+  {
+    name: "AlgoZenith",
+    type: "COMPETITIVE CODING",
+  },
+  {
+    name: "Kanpur Ai Space",
+    type: "AI & INNOVATION",
+  },
+  {
+    name: "Aarambh Network",
+    type: "BUILDER NETWORK",
+  },
+];

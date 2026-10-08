@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/hero";
 import { Process } from "@/components/sections/process";
 import { Rewards } from "@/components/sections/rewards";
 import { Roles } from "@/components/sections/roles";
+import { Sponsors } from "@/components/sections/sponsors";
 import { Timeline } from "@/components/sections/timeline";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Process />
       <Rewards />
       <Timeline />
+      <Sponsors />
     </main>
   );
 }
