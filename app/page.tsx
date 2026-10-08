@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Features } from "@/components/sections/features";
+import { Footer } from "@/components/sections/footer";
 import { Hero } from "@/components/sections/hero";
 import { Process } from "@/components/sections/process";
 import { Rewards } from "@/components/sections/rewards";
@@ -18,6 +19,7 @@ export default function Home() {
       <Rewards />
       <Timeline />
       <Sponsors />
+      <Footer />
     </main>
   );
 }
