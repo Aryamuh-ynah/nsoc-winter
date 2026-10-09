@@ -149,6 +149,19 @@
   --sidebar-ring: oklch(0.72 0.16 225);
 }
 
+@media (pointer: fine) {
+  html,
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
