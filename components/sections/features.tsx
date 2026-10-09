@@ -1,5 +1,5 @@
 "use client";
-
+import { WinterCard } from "@/components/ui/winter-card";
 import { features } from "@/lib/data";
 import { motion } from "motion/react";
 
@@ -27,7 +27,7 @@ export function Features() {
 
         <div className="mt-16 grid gap-5 md:grid-cols-2">
           {features.map((feature, index) => (
-            <motion.article
+            <motion.div
               key={feature.number}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -36,26 +36,23 @@ export function Features() {
                 duration: 0.5,
                 delay: index * 0.08,
               }}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-card/60 p-8 backdrop-blur-xl transition hover:-translate-y-1 hover:border-cyan-500/40"
             >
-              <div className="absolute right-6 top-4 text-7xl font-bold text-muted/50">
-                {feature.number}
-              </div>
+              <WinterCard className="h-full p-8">
+                <div className="absolute right-6 top-4 text-7xl font-bold text-sky-500/[0.06]">
+                  {feature.number}
+                </div>
 
-              <p className="relative text-xs font-medium tracking-[0.2em] text-cyan-500">
-                {feature.number}
-              </p>
+                <p className="text-xs font-medium tracking-[0.2em] text-sky-500">
+                  {feature.number}
+                </p>
 
-              <h3 className="relative mt-8 text-2xl font-semibold">
-                {feature.title}
-              </h3>
+                <h3 className="mt-8 text-2xl font-semibold">{feature.title}</h3>
 
-              <p className="relative mt-4 max-w-xl leading-7 text-muted-foreground">
-                {feature.description}
-              </p>
-
-              <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-500 group-hover:w-full" />
-            </motion.article>
+                <p className="mt-4 max-w-xl leading-7 text-muted-foreground">
+                  {feature.description}
+                </p>
+              </WinterCard>
+            </motion.div>
           ))}
         </div>
       </div>

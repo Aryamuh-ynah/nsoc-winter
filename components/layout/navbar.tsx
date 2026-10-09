@@ -44,7 +44,7 @@ export function Navbar() {
 
           <a
             href="#roles"
-            className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+            className="winter-button winter-button-primary text-sm"
           >
             Join now
           </a>

@@ -18,7 +18,7 @@ export function Sponsors() {
         {/* Sponsors heading */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-medium tracking-[0.2em] text-cyan-500">
-            <Snowflake className="h-4 w-4" />
+            <Snowflake className="snowflake-spin h-4 w-4" />
             TRACK RECORD & BACKING
           </div>
 
@@ -61,7 +61,7 @@ export function Sponsors() {
 
             <a
               href="mailto:connect.nsoc@gmail.com"
-              className="mt-7 inline-flex items-center gap-2 rounded-xl border border-cyan-500/30 px-5 py-2.5 text-sm font-semibold text-cyan-500 transition hover:bg-cyan-500/10"
+              className="winter-button winter-button-secondary mt-7"
             >
               <Handshake className="h-4 w-4" />
               Partner With Us

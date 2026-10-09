@@ -1,5 +1,6 @@
 "use client";
 
+import { WinterCard } from "@/components/ui/winter-card";
 import { timeline } from "@/lib/data";
 import { CalendarDays, Snowflake } from "lucide-react";
 import { motion } from "motion/react";
@@ -15,7 +16,7 @@ export function Timeline() {
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-medium tracking-[0.2em] text-cyan-500">
-            <Snowflake className="h-4 w-4" />
+            <Snowflake className="snowflake-spin h-4 w-4" />
             PROGRAM TIMELINE
           </div>
 
@@ -51,7 +52,7 @@ export function Timeline() {
                   <div
                     className={isLeft ? "md:pr-4" : "md:col-start-2 md:pl-4"}
                   >
-                    <article className="ml-12 rounded-3xl border border-border bg-card/60 p-7 backdrop-blur-xl md:ml-0">
+                    <WinterCard className="ml-12 p-7 md:ml-0">
                       <div className="flex items-center gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10">
                           <CalendarDays className="h-4 w-4 text-cyan-500" />
@@ -73,7 +74,7 @@ export function Timeline() {
                       <p className="mt-4 leading-7 text-muted-foreground">
                         {item.description}
                       </p>
-                    </article>
+                    </WinterCard>
                   </div>
 
                   <div className="absolute left-5 top-8 flex h-4 w-4 -translate-x-1/2 items-center justify-center rounded-full border-2 border-cyan-500 bg-background md:left-1/2">

@@ -6,40 +6,37 @@ import { useEffect, useState } from "react";
 export function CustomCursor() {
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
-
   const [visible, setVisible] = useState(false);
 
   const smoothX = useSpring(x, {
-    stiffness: 700,
-    damping: 45,
+    stiffness: 600,
+    damping: 40,
   });
 
   const smoothY = useSpring(y, {
-    stiffness: 700,
-    damping: 45,
+    stiffness: 600,
+    damping: 40,
   });
 
   useEffect(() => {
-    const media = window.matchMedia("(pointer: fine)");
+    const finePointer = window.matchMedia("(pointer: fine)");
 
-    if (!media.matches) return;
+    if (!finePointer.matches) return;
 
-    const handleMove = (event: PointerEvent) => {
+    const move = (event: PointerEvent) => {
       x.set(event.clientX);
       y.set(event.clientY);
       setVisible(true);
     };
 
-    const handleLeave = () => {
-      setVisible(false);
-    };
+    const leave = () => setVisible(false);
 
-    window.addEventListener("pointermove", handleMove);
-    document.documentElement.addEventListener("mouseleave", handleLeave);
+    window.addEventListener("pointermove", move);
+    document.documentElement.addEventListener("mouseleave", leave);
 
     return () => {
-      window.removeEventListener("pointermove", handleMove);
-      document.documentElement.removeEventListener("mouseleave", handleLeave);
+      window.removeEventListener("pointermove", move);
+      document.documentElement.removeEventListener("mouseleave", leave);
     };
   }, [x, y]);
 
@@ -54,7 +51,7 @@ export function CustomCursor() {
         animate={{
           opacity: visible ? 1 : 0,
         }}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400 mix-blend-difference md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500 dark:bg-cyan-300 md:block"
       />
 
       <motion.div
@@ -64,12 +61,9 @@ export function CustomCursor() {
           y: smoothY,
         }}
         animate={{
-          opacity: visible ? 0.7 : 0,
+          opacity: visible ? 0.65 : 0,
         }}
-        transition={{
-          duration: 0.15,
-        }}
-        className="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/60 md:block"
+        className="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border border-sky-500/70 dark:border-cyan-300/70 md:block"
       />
     </>
   );

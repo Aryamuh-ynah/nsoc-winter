@@ -176,6 +176,17 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+@keyframes caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes partner-marquee {
   from {
     transform: translateX(0);
@@ -201,4 +212,76 @@
     black 92%,
     transparent
   );
+}
+@keyframes snowflake-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.snowflake-spin {
+  animation: snowflake-spin 10s linear infinite;
+  transform-origin: center;
+}
+.winter-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+
+.winter-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-130%);
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgb(255 255 255 / 0.28) 50%,
+    transparent 80%
+  );
+  transition: transform 600ms ease;
+}
+
+.winter-button:hover::before {
+  transform: translateX(130%);
+}
+
+.winter-button:hover {
+  transform: translateY(-3px);
+}
+
+.winter-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.winter-button-primary {
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  color: #03101c;
+  box-shadow: 0 12px 35px rgb(14 165 233 / 0.22);
+}
+
+.winter-button-primary:hover {
+  box-shadow: 0 18px 45px rgb(14 165 233 / 0.35);
+}
+
+.winter-button-secondary {
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 70%, transparent);
+  color: var(--foreground);
+  backdrop-filter: blur(12px);
 }

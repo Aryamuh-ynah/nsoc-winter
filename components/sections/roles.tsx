@@ -1,5 +1,6 @@
 "use client";
 
+import { WinterCard } from "@/components/ui/winter-card";
 import { roles } from "@/lib/data";
 import { Check, Code2, FolderGit2, Users } from "lucide-react";
 import { motion } from "motion/react";
@@ -36,7 +37,7 @@ export function Roles() {
             const Icon = icons[index];
 
             return (
-              <motion.article
+              <motion.div
                 key={role.label}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -45,39 +46,38 @@ export function Roles() {
                   duration: 0.5,
                   delay: index * 0.1,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-border bg-card/60 p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-500/40"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-500/20 bg-cyan-500/10">
-                  <Icon className="h-5 w-5 text-cyan-500" />
-                </div>
+                <WinterCard className="h-full p-7">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-sky-500/20 bg-sky-500/10">
+                    <Icon className="h-5 w-5 text-sky-500" />
+                  </div>
 
-                <p className="mt-8 text-xs font-semibold tracking-[0.2em] text-cyan-500">
-                  {role.label}
-                </p>
+                  <p className="mt-8 text-xs font-semibold tracking-[0.2em] text-sky-500">
+                    {role.label}
+                  </p>
 
-                <h3 className="mt-3 text-2xl font-semibold">{role.title}</h3>
+                  <h3 className="mt-3 text-2xl font-semibold">{role.title}</h3>
 
-                <p className="mt-3 leading-7 text-muted-foreground">
-                  {role.description}
-                </p>
+                  <p className="mt-3 leading-7 text-muted-foreground">
+                    {role.description}
+                  </p>
 
-                <ul className="mt-8 space-y-4">
-                  {role.points.map((point) => (
-                    <li
-                      key={point}
-                      className="flex items-start gap-3 text-sm leading-6 text-muted-foreground"
-                    >
-                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-cyan-500/10">
-                        <Check className="h-3 w-3 text-cyan-500" />
-                      </span>
+                  <ul className="mt-8 space-y-4">
+                    {role.points.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 text-sm leading-6 text-muted-foreground"
+                      >
+                        <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-500/10">
+                          <Check className="h-3 w-3 text-sky-500" />
+                        </span>
 
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-cyan-400 to-blue-500 transition-transform duration-500 group-hover:scale-x-100" />
-              </motion.article>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </WinterCard>
+              </motion.div>
             );
           })}
         </div>
