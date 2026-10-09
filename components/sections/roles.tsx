@@ -11,7 +11,7 @@ export function Roles() {
   return (
     <section
       id="roles"
-      className="relative overflow-hidden py-24 sm:py-32"
+      className="relative overflow-hidden pt-24 pb-8 sm:pt-32 sm:pb-10"
     >
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">

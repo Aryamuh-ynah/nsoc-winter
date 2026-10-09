@@ -260,7 +260,6 @@ export function Rewards() {
   return (
     <section className="relative overflow-hidden py-24 sm:py-32">
       {/* background lights */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[450px] w-[800px] -translate-x-1/2 rounded-full bg-cyan-500/[0.07] blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
