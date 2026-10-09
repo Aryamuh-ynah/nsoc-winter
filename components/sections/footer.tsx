@@ -4,8 +4,8 @@ import {
   Code2,
   MessageCircle,
   Play,
-  Snowflake,
 } from "lucide-react";
+import Image from "next/image";
 
 const socialLinks = [
   {
@@ -48,9 +48,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/20 bg-cyan-500/10">
-                <Snowflake className="h-5 w-5 text-cyan-500" />
-              </div>
+              <Image
+                src="/images/icon.webp"
+                alt="NSoC logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-xl object-contain"
+              />
 
               <span className="text-xl font-bold">NSoC&apos;26</span>
             </div>
@@ -129,8 +133,7 @@ export function Footer() {
           <p>© 2026 NSoC. All rights reserved.</p>
 
           <p>
-            Built with <span className="text-cyan-500">♥</span> by the Nexus
-            team
+            Built with <span className="text-cyan-500">♥</span> by Humayra
           </p>
         </div>
       </div>

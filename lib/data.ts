@@ -210,15 +210,93 @@ export const sponsors = [
 
 export const communityPartners = [
   {
+    name: "Indian Society for Technical Education",
+    type: "Education Body",
+    image: "/sponsers/indian_society_for_technical_education.jpeg",
+    href: "https://www.linkedin.com/company/indian-society-for-technical-education",
+  },
+  {
+    name: "Microsoft Learn Community GGITS",
+    type: "Tech Community",
+    image: "/sponsers/microsoft_learn_ggits.png",
+    href: "https://www.linkedin.com/company/ms-ggits",
+  },
+  {
+    name: "Enginow",
+    type: "EdTech Platform",
+    image: "/sponsers/Enginow.jpg",
+    href: "https://www.enginow.in",
+  },
+  {
+    name: "Oz Lunara",
+    type: "Cloud Security",
+    image: "/sponsers/Oz_Lunara.jpg",
+    href: "https://app.ozlunara.com",
+  },
+  {
+    name: "HackDays",
+    type: "Hackathon Community",
+    image: "/sponsers/HackDays.jpg",
+    href: null,
+  },
+  {
+    name: "Celtrix",
+    type: "Open Source CLI",
+    image: "/sponsers/Celtrix.jpg",
+    href: "https://www.celtrix.tech",
+  },
+  {
     name: "AlgoZenith",
-    type: "COMPETITIVE CODING",
+    type: "Competitive Coding",
+    image: "/sponsers/algozenith.png",
+    href: "https://maang.in",
   },
   {
     name: "Kanpur Ai Space",
-    type: "AI & INNOVATION",
+    type: "AI & Innovation",
+    image: "/sponsers/KanpurAI.jpg",
+    href: "https://metaedschool.com",
   },
   {
     name: "Aarambh Network",
-    type: "BUILDER NETWORK",
+    type: "Builder Network",
+    image: "/sponsers/Aarambh_Network.jpg",
+    href: null,
+  },
+  {
+    name: "WETEAMRK7",
+    type: "Developer Hub",
+    image: "/sponsers/WETEAMRK7.jpg",
+    href: "https://www.linkedin.com/company/weteamrk7/",
+  },
+  {
+    name: "GeeksforGeeks Campus Body – KNU",
+    type: "Campus Body",
+    image: "/sponsers/GeeksforGeeks_Campus_Body.jpg",
+    href: "https://terminal-troops.super.site/",
+  },
+  {
+    name: "SphereX",
+    type: "Tech Community",
+    image: "/sponsers/SphereX.jpg",
+    href: "https://spherexcommunity.vercel.app/",
+  },
+  {
+    name: "Amogha AI",
+    type: "AI Solutions",
+    image: "/sponsers/Amogha.jpg",
+    href: "https://jamun.app/",
+  },
+  {
+    name: "Sotercare",
+    type: "HealthTech Partner",
+    image: "/sponsers/Sotercare.png",
+    href: "https://www.linkedin.com/company/sotercare",
+  },
+  {
+    name: "The Event Wallah",
+    type: "Event Management",
+    image: "/sponsers/the_event_wallah.png",
+    href: null,
   },
 ];

@@ -1,7 +1,7 @@
 "use client";
 
-import { Snowflake } from "lucide-react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const ThemeToggle = dynamic(
   () => import("@/components/theme-toggle").then((mod) => mod.ThemeToggle),
@@ -12,10 +12,17 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="#" className="flex items-center gap-2 font-semibold">
-          <Snowflake className="h-5 w-5 text-cyan-500" />
-          <span>NSoC&apos;26</span>
-        </a>
+        <div className="flex items-center gap-3">
+          <Image
+            src="/images/icon.webp"
+            alt="NSoC logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-xl object-contain"
+          />
+
+          <span className="text-xl font-bold">NSoC&apos;26</span>
+        </div>
 
         <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
           <a href="#about" className="transition hover:text-foreground">

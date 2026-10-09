@@ -3,6 +3,7 @@
 import { communityPartners, sponsors } from "@/lib/data";
 import { ExternalLink, Handshake, Snowflake } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export function Sponsors() {
   return (
@@ -71,7 +72,7 @@ export function Sponsors() {
           ))}
         </div>
 
-        {/* Community partners */}
+        {/* Community Partners */}
         <div className="mt-28">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-medium tracking-[0.25em] text-cyan-500">
@@ -88,32 +89,71 @@ export function Sponsors() {
               communities driving enthusiastic participation and innovation
               across the nation.
             </p>
+
+            <a
+              href="mailto:connect.nsoc@gmail.com"
+              className="mt-7 inline-flex items-center gap-2 rounded-xl border border-cyan-500/30 px-5 py-2.5 text-sm font-semibold text-cyan-500 transition hover:bg-cyan-500/10"
+            >
+              <Handshake className="h-4 w-4" />
+              Partner With Us
+            </a>
           </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {communityPartners.map((partner, index) => (
-              <motion.div
-                key={partner.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.4,
-                  delay: index * 0.08,
-                }}
-                className="rounded-3xl border border-border bg-card/60 p-6 text-center backdrop-blur-xl"
-              >
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-border bg-background/70">
-                  <Handshake className="h-6 w-6 text-cyan-500" />
-                </div>
+          {/* Marquee */}
+          <div className="partner-marquee-mask mt-14 overflow-hidden">
+            <motion.div
+              className="flex w-max"
+              animate={{
+                x: ["0%", "-50%"],
+              }}
+              transition={{
+                duration: 45,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[...communityPartners, ...communityPartners].map(
+                (partner, index) => {
+                  const card = (
+                    <div className="group mx-3.5 flex w-64 shrink-0 flex-col items-center justify-center gap-4 rounded-3xl border border-border bg-card/60 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-500/40 lg:w-72">
+                      <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-2xl border border-border bg-background/70 p-2">
+                        <Image
+                          src={partner.image}
+                          alt={partner.name}
+                          width={80}
+                          height={80}
+                          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
 
-                <h3 className="mt-5 text-lg font-semibold">{partner.name}</h3>
+                      <div className="text-center">
+                        <h3 className="line-clamp-1 text-sm font-semibold transition group-hover:text-cyan-500">
+                          {partner.name}
+                        </h3>
 
-                <p className="mt-2 text-xs font-medium tracking-[0.15em] text-cyan-500">
-                  {partner.type}
-                </p>
-              </motion.div>
-            ))}
+                        <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.16em] text-cyan-500">
+                          {partner.type}
+                        </p>
+                      </div>
+                    </div>
+                  );
+
+                  return partner.href ? (
+                    <a
+                      key={`${partner.name}-${index}`}
+                      href={partner.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${partner.name}`}
+                    >
+                      {card}
+                    </a>
+                  ) : (
+                    <div key={`${partner.name}-${index}`}>{card}</div>
+                  );
+                },
+              )}
+            </motion.div>
           </div>
         </div>
       </div>
