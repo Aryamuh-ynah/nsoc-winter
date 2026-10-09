@@ -36,11 +36,10 @@ export function Hero() {
           <Snowflake className="snowflake-spin h-4 w-4" />
           45-DAY OPEN SOURCE SPRINT
         </div>
-
         <h1 className="text-5xl font-black tracking-tight sm:text-7xl lg:text-8xl">
           <span className="block">Nexus</span>
 
-          <span className="mt-2 block min-h-[1.1em] bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent">
+          <span className="mt-2 inline-block whitespace-nowrap bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 bg-clip-text text-transparent">
             {typed}
             <span className="ml-1 inline-block w-[3px] animate-pulse bg-sky-500 align-middle">
               &nbsp;

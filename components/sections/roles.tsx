@@ -30,7 +30,7 @@ export function Roles() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {roles.map((role, index) => {
             const Icon = icons[index];
 

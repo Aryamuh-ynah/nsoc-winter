@@ -44,7 +44,7 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
 
 export function Process() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-1 sm:py-30">
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         {/* Stats */}
         <div className="grid overflow-hidden rounded-3xl border border-border bg-card/60 backdrop-blur-xl md:grid-cols-3">
