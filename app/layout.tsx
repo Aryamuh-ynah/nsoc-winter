@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { CustomCursor } from "@/components/ui/custom-cursor";
+import { SnowBackground } from "@/components/ui/snow-background";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -22,8 +23,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SnowBackground />
           <CustomCursor />
-          {children}
+
+          <div className="relative z-10">{children}</div>
         </ThemeProvider>
       </body>
     </html>

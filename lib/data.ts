@@ -193,20 +193,29 @@ export const sponsors = [
     name: "Unstop",
     description:
       "A leading platform for hosting and managing online competitions, hackathons, and hiring challenges, fostering student talent across tech domains.",
+    image: "/sponsers/unstop.webp",
+    href: "https://unstop.com/p/open-source-program-nexus-spring-of-code-1661333",
+    variant: "title",
   },
   {
     tier: "GOLD SPONSOR",
     name: "Arkham Experience",
     description:
       "An immersive media-tech company pioneering Gen AI, Agentic AI, Holographics, Spatial Computing, AR/XR, and distributed networks.",
+    image: "/sponsers/arkham.jpeg",
+    href: "https://arkhamarchives.net",
+    variant: "gold",
   },
   {
     tier: "SILVER SPONSOR",
     name: "Extension Shield",
     description:
       "Security-first browser extension management. Protecting developers and organizations from malicious extensions and supply chain risks.",
+    image: "/sponsers/extensionShield.jpeg",
+    href: "https://extensionshield.com",
+    variant: "silver",
   },
-];
+] as const;
 
 export const communityPartners = [
   {

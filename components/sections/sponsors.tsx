@@ -1,7 +1,8 @@
 "use client";
 
+import { SponsorCard } from "@/components/ui/sponsor-card";
 import { communityPartners, sponsors } from "@/lib/data";
-import { ExternalLink, Handshake, Snowflake } from "lucide-react";
+import { Handshake, Snowflake } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -34,41 +35,9 @@ export function Sponsors() {
         </div>
 
         {/* Sponsor cards */}
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
-          {sponsors.map((sponsor, index) => (
-            <motion.article
-              key={sponsor.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.08,
-              }}
-              className="group rounded-3xl border border-border bg-card/60 p-7 backdrop-blur-xl transition hover:-translate-y-1 hover:border-cyan-500/30"
-            >
-              <p className="text-xs font-semibold tracking-[0.18em] text-cyan-500">
-                {sponsor.tier}
-              </p>
-
-              <div className="mt-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-border bg-background/70">
-                <Handshake className="h-7 w-7 text-cyan-500" />
-              </div>
-
-              <h3 className="mt-6 text-2xl font-semibold">{sponsor.name}</h3>
-
-              <p className="mt-4 leading-7 text-muted-foreground">
-                {sponsor.description}
-              </p>
-
-              <button
-                type="button"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-cyan-500 transition hover:text-cyan-400"
-              >
-                Visit Website
-                <ExternalLink className="h-4 w-4" />
-              </button>
-            </motion.article>
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 [perspective:1200px]">
+          {sponsors.map((sponsor) => (
+            <SponsorCard key={sponsor.name} sponsor={sponsor} />
           ))}
         </div>
 
