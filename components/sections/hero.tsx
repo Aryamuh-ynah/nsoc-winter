@@ -59,12 +59,18 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a href="#roles" className="winter-button winter-button-primary">
+          <a
+            href="#roles"
+            className="winter-button winter-button-primary inline-flex items-center justify-center gap-2"
+          >
             <span>Join now</span>
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 shrink-0" />
           </a>
 
-          <a href="#about" className="winter-button winter-button-secondary">
+          <a
+            href="#about"
+            className="winter-button winter-button-secondary inline-flex items-center justify-center"
+          >
             Learn more
           </a>
         </div>

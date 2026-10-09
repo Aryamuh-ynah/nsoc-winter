@@ -10,7 +10,7 @@ export function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative overflow-hidden border-t border-border bg-background py-24 sm:py-32"
+      className="relative overflow-hidden bg-background py-24 sm:py-32"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.08),transparent_35%)]" />
 

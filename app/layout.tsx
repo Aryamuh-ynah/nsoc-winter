@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import { BackToTop } from "@/components/ui/back-to-top";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { SnowBackground } from "@/components/ui/snow-background";
 import type { Metadata } from "next";
@@ -27,6 +28,7 @@ export default function RootLayout({
           <CustomCursor />
 
           {children}
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

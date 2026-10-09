@@ -21,6 +21,11 @@ import { MouseEvent } from "react";
 import { contributorRewards, participantRewards } from "@/lib/data";
 
 const rankIcons = [Trophy, Medal, Award, Sparkles];
+const participantRewardIcons = {
+  "TruScholar Digital Certificate": ScrollText,
+  "NSoC Digital Certificate": BadgeCheck,
+  "Badge Point Base": Medal,
+};
 
 function getRewardIcon(reward: string) {
   const value = reward.toLowerCase();
@@ -253,7 +258,7 @@ function RewardCard({
 
 export function Rewards() {
   return (
-    <section className="relative overflow-hidden border-t border-border bg-background py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-background py-24 sm:py-32">
       {/* background lights */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-[450px] w-[800px] -translate-x-1/2 rounded-full bg-cyan-500/[0.07] blur-[120px]" />
 
@@ -307,42 +312,55 @@ export function Rewards() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
-            {participantRewards.map((reward, index) => (
-              <motion.div
-                key={reward}
-                initial={{
-                  opacity: 0,
-                  y: 25,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                whileHover={{
-                  y: -5,
-                  scale: 1.02,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  delay: index * 0.08,
-                }}
-                className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 p-5 backdrop-blur-xl"
-              >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-500/20 bg-cyan-500/10 transition group-hover:rotate-6 group-hover:scale-110">
-                  <Award className="h-5 w-5 text-cyan-500" />
-                </div>
+            {participantRewards.map((reward, index) => {
+              const Icon =
+                participantRewardIcons[
+                  reward as keyof typeof participantRewardIcons
+                ] ?? Award;
 
-                <div>
-                  <p className="text-[10px] tracking-[0.18em] text-cyan-500">
-                    ALL PARTICIPANTS
-                  </p>
+              return (
+                <motion.div
+                  key={reward}
+                  initial={{
+                    opacity: 0,
+                    y: 25,
+                    scale: 0.96,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                  }}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.02,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: index * 0.1,
+                  }}
+                  className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 p-5 backdrop-blur-xl"
+                >
+                  <motion.div
+                    whileHover={{
+                      rotate: 8,
+                      scale: 1.12,
+                    }}
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-500/20 bg-cyan-500/10"
+                  >
+                    <Icon className="h-5 w-5 text-cyan-500" />
+                  </motion.div>
 
-                  <p className="mt-1 font-semibold">{reward}</p>
-                </div>
-              </motion.div>
-            ))}
+                  <div>
+                    <p className="text-[10px] tracking-[0.18em] text-cyan-500">
+                      ALL PARTICIPANTS
+                    </p>
+
+                    <p className="mt-1 font-semibold">{reward}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

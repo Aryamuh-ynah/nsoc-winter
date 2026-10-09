@@ -39,14 +39,21 @@ export function Navbar() {
           </a>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <ThemeToggle />
 
           <a
-            href="#roles"
+            href="/login"
+            className="winter-button winter-button-secondary hidden text-sm sm:inline-flex"
+          >
+            Log in
+          </a>
+
+          <a
+            href="/signup"
             className="winter-button winter-button-primary text-sm"
           >
-            Join now
+            Sign up
           </a>
         </div>
       </div>
