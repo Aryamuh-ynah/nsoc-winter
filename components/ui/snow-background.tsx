@@ -21,12 +21,12 @@ export function SnowBackground() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
+      className="pointer-events-none fixed inset-0 z-40 overflow-hidden"
     >
       {flakes.map((flake) => (
         <motion.span
           key={flake.id}
-          className="absolute top-[-20px] rounded-full bg-sky-400 dark:bg-white"
+          className="absolute top-[-20px] rounded-full bg-sky-400/70 dark:bg-white/70 shadow-[0_0_8px_rgba(56,189,248,0.35)]"
           style={{
             left: flake.left,
             width: flake.size,

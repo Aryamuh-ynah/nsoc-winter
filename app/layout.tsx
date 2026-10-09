@@ -26,7 +26,7 @@ export default function RootLayout({
           <SnowBackground />
           <CustomCursor />
 
-          <div className="relative z-10">{children}</div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
