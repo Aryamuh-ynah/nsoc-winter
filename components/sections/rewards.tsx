@@ -164,7 +164,7 @@ function RewardCard({
         whileHover={{
           scale: 1.08,
         }}
-        className="pointer-events-none absolute -right-2 -top-8 text-[9rem] font-black leading-none text-cyan-500/[0.05]"
+        className="font-display pointer-events-none absolute -right-2 -top-8 text-[9rem] leading-none text-cyan-500/[0.05]"
       >
         {index === 0 ? "1" : index === 1 ? "3" : index === 2 ? "5" : "10"}
       </motion.span>
@@ -258,7 +258,7 @@ function RewardCard({
 
 export function Rewards() {
   return (
-    <section className="relative overflow-hidden bg-background py-24 sm:py-32">
+    <section className="relative overflow-hidden py-24 sm:py-32">
       {/* background lights */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-[450px] w-[800px] -translate-x-1/2 rounded-full bg-cyan-500/[0.07] blur-[120px]" />
 

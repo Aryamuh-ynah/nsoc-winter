@@ -8,9 +8,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-syne);
+  --font-heading: var(--font-syne);
+  --font-display: var(--font-black-ops);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -60,6 +61,7 @@
 }
 
 :root {
+  --page-background: radial-gradient(circle at 50% 10%, rgb(14 165 233 / 0.10), transparent 30%), radial-gradient(circle at 12% 52%, rgb(56 189 248 / 0.07), transparent 28%), radial-gradient(circle at 88% 78%, rgb(59 130 246 / 0.06), transparent 32%), linear-gradient(180deg, #f7fbff 0%, #eef8ff 48%, #f7fbff 100%);
   --background: oklch(0.985 0.01 240);
   --foreground: oklch(0.18 0.03 250);
 
@@ -106,6 +108,7 @@
 }
 
 .dark {
+  --page-background: radial-gradient(circle at 50% 10%, rgb(34 211 238 / 0.11), transparent 30%), radial-gradient(circle at 12% 52%, rgb(14 165 233 / 0.08), transparent 28%), radial-gradient(circle at 88% 78%, rgb(59 130 246 / 0.08), transparent 32%), linear-gradient(180deg, #020817 0%, #04111f 48%, #020817 100%);
   --background: oklch(0.11 0.025 255);
   --foreground: oklch(0.97 0.01 240);
 
@@ -176,26 +179,6 @@
     @apply bg-background text-foreground font-sans;
   }
 }
-@keyframes caret-blink {
-  0%,
-  45% {
-    opacity: 1;
-  }
-
-  50%,
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes partner-marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
 .partner-marquee-mask {
   mask-image: linear-gradient(
     to right,
@@ -227,6 +210,21 @@
   animation: snowflake-spin 10s linear infinite;
   transform-origin: center;
 }
+
+.page-shell {
+  min-height: 100vh;
+  background: var(--page-background);
+  background-attachment: fixed;
+}
+
+.font-heading {
+  font-family: var(--font-syne), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-black-ops), system-ui;
+}
+
 .winter-button {
   position: relative;
   display: inline-flex;

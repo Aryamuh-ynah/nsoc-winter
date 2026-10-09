@@ -10,7 +10,7 @@ export function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative overflow-hidden bg-background py-24 sm:py-32"
+      className="relative overflow-hidden py-24 sm:py-32"
     >
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         {/* Sponsors heading */}

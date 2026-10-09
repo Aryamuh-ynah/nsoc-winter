@@ -1,9 +1,7 @@
 "use client";
 
 import { stats, steps } from "@/lib/data";
-import { motion } from "motion/react";
-
-import { useInView } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -46,7 +44,7 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
 
 export function Process() {
   return (
-    <section className="relative overflow-hidden bg-background py-24 sm:py-32">
+    <section className="relative overflow-hidden py-24 sm:py-32">
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         {/* Stats */}
         <div className="grid overflow-hidden rounded-3xl border border-border bg-card/60 backdrop-blur-xl md:grid-cols-3">
@@ -66,7 +64,7 @@ export function Process() {
                 }}
                 className="px-8 py-10 text-center"
               >
-                <p className="text-5xl font-bold tracking-tight text-cyan-500 sm:text-6xl">
+                <p className="font-display text-5xl tracking-wide text-cyan-500 sm:text-6xl">
                   <CountUp value={numericValue} suffix={suffix} />
                 </p>
 
@@ -134,7 +132,7 @@ export function Process() {
                   scale: 1.08,
                   rotate: 3,
                 }}
-                className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-500/30 bg-background text-sm font-bold text-cyan-500 shadow-[0_0_25px_rgba(14,165,233,0.08)]"
+                className="font-display relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-500/30 bg-background text-sm text-cyan-500 shadow-[0_0_25px_rgba(14,165,233,0.08)]"
               >
                 {step.number}
               </motion.div>
