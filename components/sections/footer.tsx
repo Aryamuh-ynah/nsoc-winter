@@ -1,42 +1,44 @@
 import {
-  BriefcaseBusiness,
-  Camera,
-  Code2,
-  MessageCircle,
-  Play,
-} from "lucide-react";
+  FaDiscord,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa6";
+
 import Image from "next/image";
 
 const socialLinks = [
   {
     name: "Discord",
     href: "https://discord.gg/bZ47fac2jn",
-    icon: MessageCircle,
+    icon: FaDiscord,
   },
   {
     name: "WhatsApp",
     href: "https://chat.whatsapp.com/Cs6bcCYUD5zLXmElzX9HOq",
-    icon: MessageCircle,
+    icon: FaWhatsapp,
   },
   {
     name: "Instagram",
     href: "https://www.instagram.com/nsoc.in",
-    icon: Camera,
+    icon: FaInstagram,
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/company/nso-code",
-    icon: BriefcaseBusiness,
+    icon: FaLinkedinIn,
   },
   {
     name: "YouTube",
     href: "https://www.youtube.com/@nsoc-in",
-    icon: Play,
+    icon: FaYoutube,
   },
   {
     name: "GitHub",
     href: "https://github.com/deepanshu-prajapati01",
-    icon: Code2,
+    icon: FaGithub,
   },
 ];
 
@@ -77,9 +79,9 @@ export function Footer() {
                     rel="noopener noreferrer"
                     aria-label={social.name}
                     title={social.name}
-                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-border text-muted-foreground transition hover:border-cyan-500/30 hover:bg-cyan-500/10 hover:text-cyan-500"
+                    className="group flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-card/50 text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/40 hover:bg-sky-500/10 hover:text-sky-500 hover:shadow-lg hover:shadow-sky-500/10"
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                   </a>
                 );
               })}
