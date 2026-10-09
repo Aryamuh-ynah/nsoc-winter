@@ -26,8 +26,6 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20 text-center">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.12),transparent_42%)]" />
-
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}

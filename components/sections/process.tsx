@@ -47,8 +47,6 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
 export function Process() {
   return (
     <section className="relative overflow-hidden bg-background py-24 sm:py-32">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_35%)]" />
-
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         {/* Stats */}
         <div className="grid overflow-hidden rounded-3xl border border-border bg-card/60 backdrop-blur-xl md:grid-cols-3">

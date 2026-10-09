@@ -13,8 +13,6 @@ export function Roles() {
       id="roles"
       className="relative overflow-hidden bg-background py-24 sm:py-32"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.08),transparent_35%)]" />
-
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-4 text-sm font-medium tracking-[0.25em] text-cyan-500">

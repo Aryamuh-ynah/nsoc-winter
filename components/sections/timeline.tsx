@@ -43,8 +43,6 @@ export function Timeline() {
       ref={sectionRef}
       className="relative overflow-hidden bg-background py-24 sm:py-32"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.07),transparent_50%)]" />
-
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">

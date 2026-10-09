@@ -9,8 +9,6 @@ export function Features() {
       id="about"
       className="relative overflow-hidden  bg-background py-24 sm:py-32"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.08),transparent_45%)]" />
-
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="max-w-3xl">
           <p className="mb-4 text-sm font-medium tracking-[0.25em] text-cyan-500">
